@@ -1,0 +1,9 @@
+@use"../../presets" as*;
+@use"../../mixins" as*;
+.header-content{
+    position: relative;
+    z-index: 1;
+    &__title{
+        margin: 0;
+    }
+}

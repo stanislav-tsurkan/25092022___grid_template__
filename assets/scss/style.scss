@@ -2,7 +2,7 @@
 
 @use "common/typography";
 @use "common/classes";
-
+@use "common";
 @use "components/header/header";
 @use "components/header/header-overlay";
 @use "components/header/header-menu";
@@ -16,3 +16,5 @@
 @use "components/sections/section-posts";
 
 @use "components/footer/footer";
+@import"presets/skin";
+@import"presets/variables";
