@@ -1,7 +1,22 @@
 @use"../presets"as*;
+*,
+::before,
+::after{box-sizing: border-box;}
 html{
     overflow-y: scroll;
+    font-family: $font-main;
+    font-size: $font-size;
+}
+h1{
+    font-family: $font-header;
+    font-size: 3.75rem;
+    letter-spacing: 0.12em;
+    font-weight:300;
+}
+h2{
+    font-family: $font-header;
 }
 a{
     text-decoration: none;
+    color:$color-light;
 }

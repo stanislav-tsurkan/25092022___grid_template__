@@ -5,5 +5,13 @@
     z-index: 1;
     &__title{
         margin: 0;
+        text-align: center;
+    }
+    &__container{
+      @extend %container;
+    }
+    &__actions{
+        display: flex;
+        justify-content: center;
     }
 }

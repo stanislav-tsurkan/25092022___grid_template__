@@ -166,17 +166,55 @@ template {
   display: none;
 }
 
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
   overflow-y: scroll;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  letter-spacing: 0.12em;
+
+  font-family: "Roboto Slab", serif;
+  font-size: 3.75rem;
+  font-weight: 300;
+}
+
+h2 {
+  font-family: "Roboto Slab", serif;
 }
 
 a {
   text-decoration: none;
+
+  color: #ffffff;
+}
+
+.header-content__container,
+.header-menu__container {
+  max-width: 1340px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 .header {
   position: relative;
 
+  display: grid;
+  -ms-flex-line-pack: center;
+  align-content: center;
+
   min-height: 100vh;
+  padding: 150px 0;
 
   color: #ffffff;
   background-color: #2d3651;
@@ -197,8 +235,69 @@ a {
 }
 
 .header-menu {
-  position: relative;
+  position: absolute;
   z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.header-menu__container {
+  display: grid;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+
+  gap: 20px;
+  grid-template-columns: auto 1fr;
+}
+
+.header-logo {
+  letter-spacing: 0.25em;
+
+  font-size: 1.5rem;
+}
+.header-logo__link {
+  display: block;
+
+  padding: 20px;
+}
+.header-logo__accent {
+  display: inline-block;
+
+  margin-right: 7px;
+  padding: 20px 10px;
+
+  border: 3px solid #d53d27;
+}
+
+.header-navbar {
+  display: grid;
+
+  justify-items: end;
+}
+.header-navbar__list {
+  display: grid;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(30px, -webkit-max-content));
+  grid-template-columns: repeat(auto-fit, minmax(30px, max-content));
+}
+.header-navbar__link {
+  display: block;
+
+  padding: 10px;
+}
+.header-navbar__btn {
+  display: none;
 }
 
 .header-content {
@@ -207,4 +306,14 @@ a {
 }
 .header-content__title {
   margin: 0;
+
+  text-align: center;
+}
+.header-content__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
