@@ -3,8 +3,10 @@
 .header-navbar{
     display: grid; 
     justify-items: end;
+    font-size: 18px;
+    letter-spacing: 2px;
     &__list{
-        @include unlist;
+        @include unlist(0 (-$gap-sm) 0 0);
         //display: flex;   
         //justify-content: flex-end;
         //gap: $gap;
@@ -14,12 +16,18 @@
         justify-content:end;
         width: 100%;
         }
-    &__item{
-       
-    }
+
     &__link{
         display: block;
         padding: $gap-sm;
+        font-size:1.125rem;
+        letter-spacing:0.088em;
+        transition:color 0.5s;
+
+        &:hover,
+        &:focus{
+            color:$color-accent ;
+        }
         }
     &__btn{
         display: none;

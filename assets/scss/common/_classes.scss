@@ -12,4 +12,18 @@
     font-size: 1.125rem;
     letter-spacing:0.1em;
     font-weight: 400;
+    transition: 0.5s;
+    &:hover,
+    &:focus{
+        background-color: $color-accent;
+        opacity: 0.95;
+    }
+
+    &--primary{
+        background-color:rgba($color-primary,0.8);
+        border: 2px solid $color-primary;
+    }
+}
+.visually-hidden{
+    @include visually-hidden;
 }
