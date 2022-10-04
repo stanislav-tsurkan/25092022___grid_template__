@@ -218,7 +218,6 @@ a {
   -ms-flex-pack: center;
   justify-content: center;
 
-  width: 250px;
   height: 60px;
   padding: 0.5em 1em;
 
@@ -227,7 +226,8 @@ a {
           transition: 0.5s;
   letter-spacing: 0.1em;
 
-  border: 2px solid #ffffff;
+  border-width: 2px;
+  border-style: solid;
   background-color: rgba(255, 255, 255, 0.1);
 
   font-size: 1.125rem;
@@ -238,8 +238,15 @@ a {
   opacity: 0.95;
   background-color: #d66926;
 }
+.btn--light {
+  width: 250px;
+
+  border-color: #ffffff;
+}
 .btn--primary {
-  border: 2px solid #2d3651;
+  width: 350px;
+
+  border-color: #2d3651;
   background-color: rgba(45, 54, 81, 0.8);
 }
 
@@ -395,9 +402,9 @@ a {
   margin-bottom: 20px;
 
   gap: 10px;
+  grid-auto-rows: calc(33.3333vh - 13.3333333333px);
   grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, calc(33.3333vh - 13.3333333333px));
 }
 .skills__actions {
   display: -webkit-box;
@@ -526,4 +533,40 @@ a {
 
 .skill-item:nth-of-type(9) {
   grid-area: a9;
+}
+
+@media (max-width: 992px) {
+  .btn--light {
+    width: 200px;
+    height: 50px;
+
+    font-size: 16px;
+  }
+  .skills__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .btn--light {
+    width: 170px;
+    height: 40px;
+  }
+  .skills__container {
+    grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-height: 600px) {
+  .skills__container {
+    grid-auto-rows: 186.6667px;
+  }
+}
+
+@media (max-width: 576px) {
+  .skills__container {
+    grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+    grid-template-columns: 1fr;
+  }
 }

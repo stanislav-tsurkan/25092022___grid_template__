@@ -9,9 +9,27 @@ $lokal-gap:calc(40px/3);
     display: grid;
     gap: $gap-sm;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, calc(33.3333vh - #{$lokal-gap}));
+    grid-auto-rows: calc(33.3333vh - #{$lokal-gap});
     grid-template-areas:"a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
     margin-bottom: $gap;
+
+    @media(max-width:992px){
+           grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media(max-width:768px){
+           grid-template-columns: repeat(2, 1fr);
+           grid-template-areas:"a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
+    }
+    
+    @media(max-width:576px){
+           grid-template-columns:  1fr;
+           grid-template-areas:"a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+    }
+
+    @media(max-height:600px){
+           grid-auto-rows: calc(200px - 13.3333px);
+    }
 
     }
     &__actions{
