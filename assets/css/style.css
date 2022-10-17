@@ -416,8 +416,6 @@ a {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-
-  margin-bottom: 30px;
 }
 
 .skill-item {
@@ -533,6 +531,219 @@ a {
 
 .skill-item:nth-of-type(9) {
   grid-area: a9;
+}
+
+.about {
+  position: relative;
+
+  height: 700px;
+  margin-top: 30px;
+
+  background-color: #e5e5e5;
+}
+.about__container {
+  display: grid;
+
+  max-width: 1340px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 104px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  gap: 100px;
+  grid-template-areas: "a1 a2";
+  grid-template-columns: 1fr 275px;
+}
+.about__image {
+  position: relative;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  width: 275px;
+  height: 480px;
+
+  background-image: url(../../../../assets/img/img-lamp-webdev.png);
+  background-repeat: no-repeat;
+}
+.about__content {
+  max-width: 1340px;
+  padding-right: 0;
+
+  letter-spacing: 1px;
+
+  color: #637588;
+
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 400;
+}
+.about__divizion {
+  position: absolute;
+  top: 135px;
+  left: -70px;
+
+  width: 2px;
+  height: 200px;
+  margin-right: 200px;
+  margin-left: 20px;
+
+  opacity: 0.3;
+  background-color: #707070;
+}
+.about__title {
+  margin-top: 0;
+
+  letter-spacing: 4px;
+
+  color: #2d3651;
+
+  font-family: "Roboto Slab";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+.form {
+  width: 100%;
+  height: 120px;
+  padding-top: 30px;
+
+  background-color: #2d3651;
+}
+.form-btn {
+  width: 100%;
+
+  color: #ffffff;
+  border-color: #2d3651;
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.form-btn:hover {
+  cursor: pointer;
+
+  border: 2px solid #ffffff;
+}
+.form-container {
+  display: grid;
+
+  max-width: 1340px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.form-item {
+  font-size: 1.125rem;
+}
+.form-item__input {
+  width: 100%;
+  height: 60px;
+  padding-right: 30px;
+  padding-left: 30px;
+
+  -webkit-transition: 0.5s;
+       -o-transition: 0.5s;
+          transition: 0.5s;
+
+  color: #ffffff;
+  border: 2px solid #2d3651;
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.form-item__input:hover,
+.form-item__input:focus {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.15);
+  border-bottom-color: #ffffff;
+  outline: 0;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.form-item__input::-webkit-input-placeholder {
+  letter-spacing: 2px;
+
+  color: rgba(255, 255, 255, 0.51);
+
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 39px;
+}
+
+.form-item__input::-moz-placeholder {
+  letter-spacing: 2px;
+
+  color: rgba(255, 255, 255, 0.51);
+
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 39px;
+}
+
+.form-item__input:-ms-input-placeholder {
+  letter-spacing: 2px;
+
+  color: rgba(255, 255, 255, 0.51);
+
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 39px;
+}
+
+.form-item__input::-ms-input-placeholder {
+  letter-spacing: 2px;
+
+  color: rgba(255, 255, 255, 0.51);
+
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 39px;
+}
+
+.form-item__input::placeholder {
+  letter-spacing: 2px;
+
+  color: rgba(255, 255, 255, 0.51);
+
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 39px;
+}
+
+.form-item__input:hover::-webkit-input-placeholder {
+  color: white;
+}
+
+.form-item__input:hover::-moz-placeholder {
+  color: white;
+}
+
+.form-item__input:hover:-ms-input-placeholder {
+  color: white;
+}
+
+.form-item__input:hover::-ms-input-placeholder {
+  color: white;
+}
+
+.form-item__input:hover::placeholder {
+  color: white;
 }
 
 @media (max-width: 992px) {

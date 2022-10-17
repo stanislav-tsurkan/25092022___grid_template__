@@ -1,0 +1,66 @@
+@use"../../presets" as*;
+@use"../../mixins" as*;
+.form{
+    width: 100%;
+    height: 120px; 
+    background-color:$color-primary;
+    padding-top: 30px;
+    &-btn{
+        width: 100%;
+        color:$color-light;
+        border-color:$color-primary;
+        border-bottom-color: rgba($color-light, 0.25);
+        background-color:rgba($color-light, 0.1);
+        &:hover{
+           border: 2px solid $color-light; 
+           cursor: pointer;
+        }
+    }
+
+    &-container{ 
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     gap: 20px;
+     max-width:$ul;
+     margin-left: auto;
+     margin-right: auto;
+     padding-left: $gap;
+     padding-right: $gap;
+    }
+
+    &-item{  
+      font-size: 1.125rem;
+      &__input{
+        height: 60px;
+        width: 100%;
+        color:$color-light;
+        border: 2px solid $color-primary;
+        border-bottom-color: rgba($color-light, 0.25);
+        background-color:rgba($color-light, 0.05);
+        padding-left: 30px;
+        padding-right: 30px;
+        transition: 0.5s;
+
+        &:hover,
+        &:focus {
+            border-color: rgba($color-light, 0.15) ;
+            border-bottom-color:$color-light;
+            background-color: rgba($color-light, 0.15);
+            outline: 0;
+            color:$color-light;
+            }
+        }
+    }
+}
+
+.form-item__input::placeholder{
+    color:rgba($color-light, 0.51);
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 39px;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+.form-item__input:hover::placeholder{
+    color:rgba($color-light, 1);
+}
