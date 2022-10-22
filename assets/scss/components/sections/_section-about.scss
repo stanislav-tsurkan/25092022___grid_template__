@@ -2,9 +2,9 @@
 @use"../../mixins" as*;
 .about{
     background-color:$color-gray-light ;
-    position: relative;
     margin-top: 30px;
-    height: 700px;
+    padding-bottom:82px;
+    padding-top: 100px;
     &__container{
         display: grid;
         max-width:$ul;
@@ -15,23 +15,22 @@
         gap: 100px;
         grid-template-columns: 1fr 275px;
         grid-template-areas:"a1 a2";
-        padding-top: 104px;
+        
         }
      &__image{  
       display: flex;
       position: relative;
       justify-content: center;
       align-items: center;  
-      height: 480px;
-      width: 275px;
-      background-image: url(../../../../assets/img/img-lamp-webdev.png);
-      background-repeat: no-repeat;
+      margin-bottom: 5px;
+      transform: scale(0.985)  translate(1.5px , -7px);
+
       }
 
      &__content{
         max-width: 1340px;
         font-size: 18px;
-        letter-spacing: 1px;
+        letter-spacing: 0.055em;
         color:$color-gray;
         font-weight: 400;
         font-family: "Roboto";
@@ -44,9 +43,9 @@
         background-color:#707070;
         margin-left: 20px;
         margin-right: 200px;
-        opacity:0.3;
-        top:135px;
-        left:-70px;
+        opacity:0.1;
+        top:144px;
+        left:-73.5px;
       }
       &__title{
         font-size: 40px;
@@ -56,5 +55,6 @@
         font-weight: 700;
         font-family: "Roboto Slab";
         margin-top: 0;
+        margin-bottom: 43px;
       }
 }
