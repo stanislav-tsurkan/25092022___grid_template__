@@ -34,12 +34,21 @@
                 width: 170px;
                 height: 40px;
         }
+
+
     }   
   
     &--primary{
         background-color:rgba($color-primary,0.8);
         border-color: $color-primary;
         width: 350px;
+
+        @media(max-width:576px){
+            width:532px;
+            height: 40px;
+     }
+ 
+
     }
 }
 

@@ -14,7 +14,17 @@
         padding-right: $gap;
         gap: 100px;
         grid-template-columns: 1fr 275px;
-        grid-template-areas:"a1 a2";
+        
+        @media(max-width:768px){
+          gap: 20px;
+          grid-template-columns: 1fr 236px;
+        }
+        
+        @media(max-width:576px){
+          grid-template-columns: 1fr;
+           
+          }
+  
         
         }
      &__image{  
@@ -30,11 +40,11 @@
      &__content{
         max-width: 1340px;
         font-size: 18px;
-        letter-spacing: 0.055em;
+        letter-spacing: 0.0491em;
         color:$color-gray;
         font-weight: 400;
         font-family: "Roboto";
-        padding-right:0;
+        padding-right:16px;
 }
       &__divizion{
         position: absolute;
@@ -46,6 +56,15 @@
         opacity:0.1;
         top:144px;
         left:-73.5px;
+
+        @media(max-width:768px){
+          left:-45px;
+        }
+
+        @media(max-width:576px){
+          display: none;           
+          }
+
       }
       &__title{
         font-size: 40px;
