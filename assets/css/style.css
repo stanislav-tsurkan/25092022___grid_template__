@@ -340,8 +340,12 @@ a {
 
   justify-items: end;
 }
-.header-navbar__item {
-  margin: 20px 10px;
+.header-navbar__list {
+  margin: 0 -10px 0 0;
+  margin-right: 43px;
+  padding: 0;
+
+  list-style: none;
 }
 .header-navbar__link {
   display: block;
@@ -1073,10 +1077,6 @@ a {
     justify-content: end;
 
     width: 100%;
-    margin: 0 -10px 0 0;
-    padding: 0;
-
-    list-style: none;
 
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(30px, -webkit-max-content));
@@ -1179,6 +1179,9 @@ a {
     background-color: rgba(68, 89, 110, 0.9);
     -webkit-box-shadow: 3px 3px 10px black;
             box-shadow: 3px 3px 10px black;
+  }
+  .header-navbar__item {
+    margin: 20px 10px;
   }
   .header-navbar__link {
     padding: 10px 20px;

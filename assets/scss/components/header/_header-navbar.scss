@@ -2,52 +2,49 @@
 @use"../../mixins" as*;
 .header-navbar {
   display: grid;
-
-  letter-spacing: 2px;
-
-  font-size: 18px;
-
   justify-items: end;
-
+  letter-spacing: 2px;
+  font-size: 18px;
+  
   &__list {
-    @include md-min {
+       
+      @include unlist(0 (-$gap-sm) 0 0);
+      margin-right: 43px;
+      @include md-min {
       display: grid;
       justify-content: end;
-
       width: 100%;
-
       gap: $gap;
       grid-template-columns: repeat(auto-fit, minmax(30px,max-content));
       //display: flex;   
       //justify-content: flex-end;
       //gap: $gap;
-      @include unlist(0 (-$gap-sm) 0 0);
+      
     }
     @include md {
       position: absolute;
       top: 100%;
       right: $gap;
-
       display: none;
       display: block ;
-
       background-color: rgba($color-gray-dark,0.9);
       box-shadow: 3px 3px 10px black;
-
       @include unlist();
     }
   }
 
   &__item {
-    margin: $gap $gap-sm;
+    @include md {
+      margin: $gap $gap-sm;  
+    }
+    
+        
   }
 
   &__link {
     display: block;
-
     transition: color 0.5s;
     letter-spacing: 0.1em;
-
     font-size: 1.125rem;
 
     @include md-min {
