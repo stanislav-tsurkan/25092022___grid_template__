@@ -28,15 +28,13 @@
       right: $gap;
       background-color: rgba($color-gray-dark,0.9);
       box-shadow: 3px 3px 10px black;
-      
-    }
+      }
   }
 
   &__item {
     @include md {
       margin: $gap $gap-sm;  
     }
-            
   }
 
   &__link {
@@ -60,8 +58,6 @@
 
   &__btn {
     position: relative;
-    /* Icon 3 */
-
     width: 30px;
     height: 22.5px;
     margin: $gap 0;
