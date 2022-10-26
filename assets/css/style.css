@@ -341,11 +341,7 @@ a {
   justify-items: end;
 }
 .header-navbar__list {
-  margin: 0 -10px 0 0;
   margin-right: 43px;
-  padding: 0;
-
-  list-style: none;
 }
 .header-navbar__link {
   display: block;
@@ -1077,6 +1073,10 @@ a {
     justify-content: end;
 
     width: 100%;
+    margin: 0 -10px 0 0;
+    padding: 0;
+
+    list-style: none;
 
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(30px, -webkit-max-content));
@@ -1168,8 +1168,8 @@ a {
     top: 100%;
     right: 20px;
 
-    display: none;
     display: block;
+    display: none;
 
     margin: 0;
     padding: 0;

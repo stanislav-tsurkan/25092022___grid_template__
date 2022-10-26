@@ -7,8 +7,6 @@
   font-size: 18px;
   
   &__list {
-       
-      @include unlist(0 (-$gap-sm) 0 0);
       margin-right: 43px;
       @include md-min {
       display: grid;
@@ -19,17 +17,18 @@
       //display: flex;   
       //justify-content: flex-end;
       //gap: $gap;
-      
+      @include unlist(0 (-$gap-sm) 0 0);
     }
     @include md {
+      @include unlist();
+      display: block ;
+      display: none;
       position: absolute;
       top: 100%;
       right: $gap;
-      display: none;
-      display: block ;
       background-color: rgba($color-gray-dark,0.9);
       box-shadow: 3px 3px 10px black;
-      @include unlist();
+      
     }
   }
 
@@ -37,8 +36,7 @@
     @include md {
       margin: $gap $gap-sm;  
     }
-    
-        
+            
   }
 
   &__link {
