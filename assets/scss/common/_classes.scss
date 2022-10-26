@@ -1,57 +1,60 @@
 @use"../presets"as*;
 @use"../mixins"as*;
-.btn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60px;
-    background-color:rgba($color-light, 0.1);
-    border-width: 2px;
-    border-style: solid;
-    padding: 0.5em 1em;
-    font-size: 1.125rem;
-    letter-spacing:0.1em;
-    font-weight: 400;
-    transition: 0.5s;
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    &:hover,
-    &:focus{
-        background-color: $color-accent;
-        opacity: 0.95;
+  height: 60px;
+  padding: 0.5em 1em;
+
+  transition: 0.5s;
+  letter-spacing: 0.1em;
+
+  border-width: 2px;
+  border-style: solid;
+  background-color: rgba($color-light, 0.1);
+
+  font-size: 1.125rem;
+  font-weight: 400;
+
+  &:hover,
+  &:focus {
+    opacity: 0.95;
+    background-color: $color-accent;
+  }
+
+  &--light {
+    width: 250px;
+
+    border-color: $color-light;
+
+    @media(max-width:992px) {
+      width: 200px;
+      height: 50px;
+
+      font-size: 16px;
     }
 
-    &--light{
-         border-color: $color-light;
-         width: 250px;
-
-        @media(max-width:992px){
-                font-size: 16px;
-                width: 200px;
-                height: 50px;
-        }
-
-        @media(max-width:768px){
-                width: 170px;
-                height: 40px;
-        }
-
-
-    }   
-  
-    &--primary{
-        background-color:rgba($color-primary,0.8);
-        border-color: $color-primary;
-        width: 350px;
-
-        @media(max-width:576px){
-            width:532px;
-            height: 40px;
-     }
- 
-
+    @media(max-width:768px) {
+      width: 170px;
+      height: 40px;
     }
+  }
+
+  &--primary {
+    width: 350px;
+
+    border-color: $color-primary;
+    background-color: rgba($color-primary,0.8);
+
+    @media(max-width:576px) {
+      width: 532px;
+      height: 40px;
+    }
+  }
 }
 
-.visually-hidden{
-    @include visually-hidden;
+.visually-hidden {
+  @include visually-hidden;
 }

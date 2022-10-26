@@ -1,108 +1,112 @@
 @use"../../presets" as*;
 @use"../../mixins" as*;
-.form{
+.form {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  background-color: $color-primary;
+
+  &-btn {
     width: 100%;
 
-    background-color:$color-primary;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    &-btn{
-        width: 100%;
-        color:$color-light;
-        border-color:$color-primary;
-        border-bottom-color: rgba($color-light, 0.25);
-        background-color:rgba($color-light, 0.1);
-        &:hover{
-           border: 2px solid $color-light; 
-           cursor: pointer;
-        }
+    color: $color-light;
+    border-color: $color-primary;
+    border-bottom-color: rgba($color-light, 0.25);
+    background-color: rgba($color-light, 0.1);
+
+    &:hover {
+      cursor: pointer;
+
+      border: 2px solid $color-light;
+    }
+  }
+
+  &-container {
+    display: grid;
+
+    max-width: $ul;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $gap;
+    padding-left: $gap;
+
+    gap: 20px;
+    grid-template-areas: "in1 in2 in3";
+    grid-template-columns: repeat(3, 1fr);
+
+    @media(max-width:992px) {
+      grid-template-areas: "in1 in2 in3";
+      grid-template-columns: repeat(3, 1fr);
     }
 
-    &-container{ 
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-areas:"in1 in2 in3";
-     gap: 20px;
-     max-width:$ul;
-     margin-left: auto;
-     margin-right: auto;
-     padding-left: $gap;
-     padding-right: $gap; 
- 
-     
-     @media(max-width:992px){
-       grid-template-columns: repeat(3, 1fr);
-       grid-template-areas:"in1 in2 in3";
-       }    
-    
-     @media(max-width:768px){
-       grid-template-columns: repeat(2, 1fr);
-       grid-template-areas:"in1 in1" "in2 in3";
-       }
- 
-       @media(max-width:576px){
-        grid-template-columns:  1fr;
-        grid-template-areas:"in1" "in2" "in3";
-        
-        }
-
+    @media(max-width:768px) {
+      grid-template-areas: "in1 in1" "in2 in3";
+      grid-template-columns: repeat(2, 1fr);
     }
 
-    &-item{  
-      font-size: 1.125rem;
-      
-      &__input{
-        display: block;
-        box-sizing: border-box;
-        height: 60px;
-        width: 100%;
-        color:$color-light;
-        border: 2px solid $color-primary;
-
-        border-bottom-color: rgba($color-light, 0.25);
-        background-color:rgba($color-light, 0.05);
-        padding-left: 30px;
-        padding-right: 30px;
-        transition: 0.5s;
-
-        &:hover,
-        &:focus {
-            border-color: rgba($color-light, 0.15) ;
-            border-bottom-color:$color-light;
-            background-color: rgba($color-light, 0.15);
-            outline: 0;
-            color:rgba($color-light,0.15);
-            }
-
-
-
-
-
-        }
+    @media(max-width:576px) {
+      grid-template-areas: "in1" "in2" "in3";
+      grid-template-columns: 1fr;
     }
+  }
+
+  &-item {
+    font-size: 1.125rem;
+
+    &__input {
+      display: block;
+
+      width: 100%;
+      height: 60px;
+      padding-right: 30px;
+      padding-left: 30px;
+
+      transition: 0.5s;
+
+      color: $color-light;
+      border: 2px solid rgba($color-light, 0);
+      border-bottom-color: rgba($color-light, 0.25);
+      background-color: rgba($color-light, 0.05);
+
+      &:hover,
+      &:focus {
+        color: rgba($color-light,0.15);
+        border-color: rgba($color-light, 0.15) ;
+        border-bottom-color: $color-light;
+        outline: 0;
+        background-color: rgba($color-light, 0.15);
+      }
+    }
+  }
 }
 
-.form-item__input::placeholder{
-    color: #637588;
-    font-size: 18px;
-    letter-spacing: 2.7px;
-    line-height: 39px;
-    font-weight: 400;
-    font-family: "Roboto";
+.form-item__input::placeholder {
+  letter-spacing: 2.7px;
+
+  color: #637588;
+
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 39px;
 }
+
 .form-item__input:hover::placeholder,
-.form-item__input:focus::placeholder
-{
-    color: #8c9bab;
-
+.form-item__input:focus::placeholder {
+  color: #8c9bab;
 }
 
-.form-item:nth-of-type(1){
+.form-item:nth-of-type(1) {
   grid-area: in1;
 }
-.form-item:nth-of-type(2){
+.form-item:nth-of-type(2) {
   grid-area: in2;
 }
-.form-item:nth-of-type(3){
+.form-item:nth-of-type(3) {
   grid-area: in3;
+}
+.btn--primary--corect {
+  border: 2px solid rgba($color-primary, 0);
+  border-bottom-color: rgba($color-light, 0.25);
 }

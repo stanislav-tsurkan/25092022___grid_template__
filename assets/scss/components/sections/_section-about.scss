@@ -1,79 +1,89 @@
 @use"../../presets" as*;
 @use"../../mixins" as*;
-.about{
-    background-color:$color-gray-light ;
-    margin-top: 30px;
-    padding-bottom:82px;
-    padding-top: 100px;
-    &__container{
-        display: grid;
-        max-width:$ul;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: $gap;
-        padding-right: $gap;
-        gap: 100px;
-        grid-template-columns: 1fr 275px;
-        
-        @media(max-width:768px){
-          gap: 20px;
-          grid-template-columns: 1fr 236px;
-        }
-        
-        @media(max-width:576px){
-          grid-template-columns: 1fr;
-           
-          }
-  
-        
-        }
-     &__image{  
-      display: flex;
-      position: relative;
-      justify-content: center;
-      align-items: center;  
-      margin-bottom: 5px;
-      transform: scale(0.985)  translate(1.5px , -7px);
+.about {
+  margin-top: 30px;
+  padding-top: 100px;
+  padding-bottom: 82px;
 
-      }
+  background-color: $color-gray-light ;
+  &__container {
+    display: grid;
 
-     &__content{
-        max-width: 1340px;
-        font-size: 18px;
-        letter-spacing: 0.0491em;
-        color:$color-gray;
-        font-weight: 400;
-        font-family: "Roboto";
-        padding-right:16px;
-}
-      &__divizion{
-        position: absolute;
-        width: 2px;
-        height:200px;
-        background-color:#707070;
-        margin-left: 20px;
-        margin-right: 200px;
-        opacity:0.1;
-        top:144px;
-        left:-73.5px;
+    max-width: $ul;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $gap;
+    padding-left: $gap;
 
-        @media(max-width:768px){
-          left:-45px;
-        }
+    gap: 100px;
+    grid-template-columns: 1fr 275px;
 
-        @media(max-width:576px){
-          display: none;           
-          }
+    @media(max-width:768px) {
+      gap: 20px;
+      grid-template-columns: 1fr 236px;
+    }
 
-      }
-      &__title{
-        font-size: 40px;
-        letter-spacing: 4px;
-        line-height: 48px;
-        color: $color-primary;
-        font-weight: 700;
-        font-family: "Roboto Slab";
-        margin-top: 0;
-        margin-bottom: 43px;
-      }
+    @media(max-width:576px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__image {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 2px;
+    margin-bottom: 5px;
+
+    transform: scale(0.985)  translate(1.5px , -7px);
+  }
+
+  &__content {
+    max-width: 1340px;
+    padding-right: 5px;
+
+    letter-spacing: 0.0491em;
+
+    color: $color-gray;
+
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 400;
+  }
+  &__divizion {
+    position: absolute;
+    top: 165px;
+    left: -72.5px;
+
+    width: 2px;
+    height: 200px;
+    margin-right: 200px;
+    margin-left: 20px;
+
+    opacity: 0.1;
+    background-color: #707070;
+
+    @media(max-width:768px) {
+      left: -45px;
+    }
+
+    @media(max-width:576px) {
+      display: none;
+    }
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 43px;
+
+    letter-spacing: 4px;
+
+    color: $color-primary;
+
+    font-family: "Roboto Slab";
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+  }
 }

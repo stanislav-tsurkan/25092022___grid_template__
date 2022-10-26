@@ -1,72 +1,84 @@
 @use"../../presets" as*;
 @use"../../mixins" as*;
-.footer{
-    left:0;
-    background-color:$color-primary;
-    margin-top:100px;
-    width: 100%;
-    padding-bottom: 69px;
+.footer {
+  left: 0;
 
-  &-container{
-    @extend %container;
+  width: 100%;
+  margin-top: 100px;
+  padding-bottom: 69px;
+
+  background-color: $color-primary;
+
+  &-container {
     padding-top: 60px;
-    }
 
-  &-social-bar{
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(32px,max-content));
-    gap:19.5px;
-    justify-content: center;
-    justify-items: center;
-    }
-
-  &-social-link{
-    transition: 0.5s;
-    }
-
-  &-social-link:hover{
-   color:$color-accent ;
+    @extend %container;
   }
 
-  &-divizion{
-    height: 2px;
+  &-social-bar {
+    display: grid;
+    justify-content: center;
+
+    gap: 19.5px;
+    grid-template-columns: repeat(auto-fit, minmax(32px,max-content));
+    justify-items: center;
+  }
+
+  &-social-link {
+    transition: 0.5s;
+  }
+
+  &-social-link:hover {
+    color: $color-accent ;
+  }
+
+  &-divizion {
     width: 76px;
-    border-bottom: 2px solid rgba($color-gray,0.3);
+    height: 2px;
     margin: 0 auto;
     margin-top: 28px;
+
+    border-bottom: 2px solid rgba($color-gray,0.3);
   }
 
-  &-copyright{
+  &-copyright {
+    display: block;
+
     margin: 0 auto;
-    display: block;
+
     text-align: center;
-    font-family:$font-main;
+
+    font-family: $font-main;
   }
 
-  &-copyright__title{
-    display:inline-block;
-    font-size: 16px;
-    letter-spacing:0.333em;
-    line-height: 20px;
-    color: #637588;
-    font-weight:100;
+  &-copyright__title {
+    display: inline-block;
+
+    margin-top: 19px;
+    margin-bottom: -1px;
     margin-left: 7.8px;
-    margin-bottom:-1px;
-    margin-top:19px;
-  }
 
-  &-copyright__title--accent{
-    display: block;
+    letter-spacing: 0.333em;
+
+    color: #637588;
+
     font-size: 16px;
-    letter-spacing:0.05em;
+    font-weight: 100;
     line-height: 20px;
-    color:$color-light;
-    font-weight:700;
-    
   }
 
-  
+  &-copyright__title--accent {
+    display: block;
+
+    letter-spacing: 0.05em;
+
+    color: $color-light;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+  }
 }
-.fab{
-    font-size: 36px;
+.fab {
+  font-size: 36px;
 }

@@ -1,18 +1,37 @@
 @use"../../presets" as*;
 @use"../../mixins" as*;
-.header-content{
-    position: relative;
-    z-index: 1;
-    &__title{
-        margin: 0 0 50px 0;
-        text-align: center;
+.header-content {
+  position: relative;
+  z-index: 1;
+
+  &__title {
+    text-align: center;
+
+    @include lg-min {
+      margin: 0 0 50px 0;
     }
-    &__container{
-      @extend %container;
+    @include lg-md {
+      margin: 0 0 40px 0;
     }
-    &__actions{
-        display: flex;
-        justify-content: center;
-        gap: $gap;
+    @include md {
+      margin: 0 0 30px 0;
     }
+  }
+
+  &__container {
+    margin-top: -2.5px;
+
+    @extend %container;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+
+    gap: $gap;
+    @include sm {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
 }
