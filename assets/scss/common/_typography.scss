@@ -7,13 +7,11 @@
 }
 html {
   overflow-y: scroll;
-
   font-family: $font-main;
   font-size: $font-size;
 }
 h1 {
   letter-spacing: 0.08em;
-
   font-family: $font-header;
   font-weight: 300;
   line-height: 1.3em;
@@ -33,6 +31,5 @@ h2 {
 }
 a {
   text-decoration: none;
-
   color: $color-light;
 }
