@@ -63,7 +63,6 @@
 
       &:hover,
       &:focus {
-        color: rgba($color-light,0.15);
         border-color: rgba($color-light, 0.15) ;
         border-bottom-color: $color-light;
         outline: 0;
@@ -96,7 +95,7 @@
 .form-item:nth-of-type(3) {
   grid-area: in3;
 }
-.btn--primary--corect {
+.form-btn-primary-corect {
   border: 2px solid rgba($color-primary, 0);
   border-bottom-color: rgba($color-light, 0.25);
 }
